@@ -1,6 +1,6 @@
 # Using `pytest` with Django.
 
-This respository contains an example django project for the [Using pytest with Django post](http://engineroom.trackmaven.com/blog/using-pytest-with-django/)
+This respository contains an example django project for the [using pytest with Django post](http://engineroom.trackmaven.com/blog/using-pytest-with-django/)
 
 ## Getting Started.
 

@@ -1,0 +1,19 @@
+db:
+    image: quay.io/trackmaven/postgresql
+    environment:
+        - POSTGRES_PASSWORD=password
+        - POSTGRES_USER=db_user
+        - POSTGRES_DB=db
+web:
+    build: .
+    command: "python app/manage.py runserver 0.0.0.0:80"
+    volumes:
+        - .:/code
+    links:
+        - db
+    ports:
+        - "8002:80"
+    environment:
+        - DATABASE_URL=postgresql://db_user:password@db:5432/db
+        - SECRET_KEY=bla
+        - DEBUG=True
